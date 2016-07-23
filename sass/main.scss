@@ -1,0 +1,152 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/utilities";
+@import "compass/layout";
+
+
+// -- VARIABLES -------- /
+
+$primary-color: #333;
+$secondary-color: #3ac162;
+
+
+// -- GLOBAL STYLES -------- /
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	font-family: Lato, Helvetica Neue, Arial, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+// -- NAVIGATION STYLES -------- /
+
+.top-nav {
+	@include clearfix;
+	color: $primary-color;
+	background-color: #fff;
+	letter-spacing: .125em;
+	padding: 1em;
+	border-bottom: 1px solid $primary-color;
+	.nav-list {
+		@media (min-width: 769px) {
+			@include float-right;
+		}
+	}
+}
+
+.logo {
+	text-transform: uppercase;
+	font-weight: 700;
+	@media (min-width: 769px) {
+		@include float-left;
+	}
+
+}
+
+.nav-list {
+	@media (min-width: 769px) {
+		@include inline-block-list(10px);
+	}
+}
+
+.bottom-nav {
+	color: #fff;
+	background-color: $primary-color;
+	text-align: center;
+	letter-spacing: .125em;
+	font-weight: 300;
+	padding: 1em;
+}
+
+.contact {
+	color: $secondary-color;
+	padding: 1em 0;
+	font-weight: 400;
+}
+
+.social-icons {
+	//@extend .nav-list;
+	@include inline-block-list(10px);
+	margin-bottom: 1em;
+
+	li {
+		color: $primary-color;
+		background-color: #fff;
+		width: 2.3em;
+		height: 2.3em;
+		margin: 0 10px;
+		padding-top: 9px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		@media (min-width: 769px) {
+			width: 2.45em;
+			height: 2.45em;
+		}
+	}
+}
+
+
+// -- MAIN BODY STYLES -------- /
+
+.intro {
+	text-align: center;
+	margin: 0 auto;
+	padding: 5em;
+
+	h1 {
+		font-size: 4em;
+		margin-bottom: 24px;
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+}
+
+.previews {
+	@include clearfix;
+
+	.image {
+		float: left;
+		width: 33.333%;
+		height: 10em;
+		background-image: url(../images/pokedex.png);
+		background-size: cover;
+		background-position: 50% 50%;
+		@media (min-width: 769px) {
+			width: 25%;
+		}
+	}
+
+	#soccer-quiz {
+		background-image: url(../images/soccer-quiz.png);
+	}
+
+	#hot-or-cold {
+		background-image: url(../images/hot-or-cold.png);
+	}
+
+	#discoveri {
+		background-image: url(../images/discoveri.png);
+	}
+}
+
+
+
+
+
+
+
